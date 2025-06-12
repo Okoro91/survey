@@ -1,43 +1,153 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
-<head> 
-<title> My project </title>
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Critical Modesty Survey Form</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<div id="container">
-  <header class="head">
-    <h1 id="title"> A Critical Modesty Survey Form </h1>
-    <p id="description"> This survet aims to assess how much people still regards modesty aa the important virtues in the society </p>
-  </header>
+  <div id="container">
+    <header class="head">
+      <h1 id="title">A Critical Modesty Survey Form</h1>
+      <p id="description">This survey aims to assess how much people still regard modesty as an important virtue in society.</p>
+    </header>
 
-  <form id="survey-form">
+    <form id="survey-form">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Kindly input your name" class="form-control" required>
 
-    <fieldset>
-      <legend> Personal Information</legend>
-      <div>
-        <label for="name" id="name-label">Name </label>
-        <input type="text" name="name" id="name" placeholder="Kindly input your name" class="form-control" required />
-      </div>
-      <div>
-        <label for="email" id="email-label">Email</label>
-        <input type="email" name="email" id="email" placeholder="Please enter your email" class="form-control" required />
-      </div>
-      <div>
-        <label for="number" id="number-label">Age<span class="clue">(Optional)</label>
-        <input type="number" name="age" id="number" min="10" max="70" placeholder="What's your Age" class="form-control" />
-      </div>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Please enter your email" class="form-control" required>
 
-      <div>
-        <label for="dropdown">Gender </label>
-        <select name="genderGroup" id="dropdown" class="form-control" required>
+        <label for="number">Age <span class="clue">(Optional)</span></label>
+        <input type="number" id="number" min="10" max="70" placeholder="What's your Age" class="form-control">
+
+        <label for="dropdown">Gender</label>
+        <select id="dropdown" class="form-control" required>
           <option disabled selected value>--Please select your gender--</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
           <option value="none">Rather not say</option>
-          
-          </body>
+        </select>
+      </fieldset>
 
+      <fieldset>
+        <legend>Modesty and Society</legend>
+        <p>Which body should be most responsible for modesty in society?</p>
+        <label><input type="radio" name="modesty-role" value="Government"> Government</label>
+        <label><input type="radio" name="modesty-role" value="Religion"> Religion</label>
+        <label><input type="radio" name="modesty-role" value="Family"> Family</label>
+        <label><input type="radio" name="modesty-role" value="Individual"> Individual</label>
+
+        <label for="scale">How modest is your society on a scale of 10?</label>
+        <input type="range" id="scale" value="5" min="0" max="10" step="1"><span id="text"></span>
+      </fieldset>
+      <div>
+        <label for="mostModest"> Modesty is mostly about</label>
+        <select name="mod-group" id="mostModest" class="form-control">
+          <option disabled selected value>--Choose an option--</option>
+          <option value="women">Married Women </option>
+          <option value="ladies"> Young Ladies</option>
+          <option value="teenage"> Teenagers</option>
+          <option value="men">Married Men</option>
+          <option value="boys">Young boys</option>
+          <option value="females">All Females only</option>
+          <option value="everyone">Everyone</option>
+
+        </select>
+
+      </div>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Modest Actions</legend>
+        <p>Which of these portray a lack of modesty?</p>
+        <label><input type="checkbox" name="actions" value="dressing"> Female dressing half-naked</label>
+        <label><input type="checkbox" name="actions" value="boys-hairstyles"> Boys cutting crazy hairstyles</label>
+        <label><input type="checkbox" name="actions" value="religious"> People not being religious</label>
+        <label><input type="checkbox" name="actions" value="tightdress"> Females in tight dresses</label>
+        <label><input type="checkbox" name="actions" value="respect"> Youth disrespecting elders</label>
+        <label><input type="checkbox" name="actions" value="unmarital-affairs"> Teenagers engaging in premarital affairs</label>
+        <label><input type="checkbox" name="actions" value="intermingling"> Uncontrolled intermingling</label>
+        <label><input type="checkbox" name="actions" value="nudity"> Media promoting celebrity nudity</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Suggestions for Improvement</legend>
+        <table>
+          <caption>Indicate your level of agreement</caption>
+          <tr>
+            <th>Statement</th>
+            <th>Strongly Agree</th>
+            <th>Agree</th>
+            <th>Neutral</th>
+            <th>Disagree</th>
+            <th>Strongly Disagree</th>
+          </tr>
+          <tr>
+            <td>Government should enforce modesty</td>
+            <td><input type="radio" name="option1"></td>
+            <td><input type="radio" name="option1"></td>
+            <td><input type="radio" name="option1"></td>
+            <td><input type="radio" name="option1"></td>
+            <td><input type="radio" name="option1"></td>
+          </tr>
+          <tr>
+            <td scope="row">Any public display acts against modesty should be punished by the law</td>
+            <td><label><input name="option2" type="radio" value="radio6"></label></td>
+            <td><label><input name="option2" type="radio" value="radio7"></label></td>
+            <td><label><input name="option2" type="radio" value="radio8"></label></td>
+            <td><label><input name="option2" type="radio" value="radio9"></label></td>
+            <td><label><input name="option2" type="radio" value="radio10"></label></td>
+          </tr>
+          <tr>
+            <td scope="row">All video shows, Movies, Music and celebrate that does not portray modesty should be banned</td>
+            <td><label><input name="options" type="radio" value="radio11"></label></td>
+            <td><label><input name="options" type="radio" value="radio12"></label></td>
+            <td><label><input name="options" type="radio" value="radio13"></label></td>
+            <td><label><input name="options" type="radio" value="radio14"></label></td>
+            <td><label><input name="options" type="radio" value="radio15"></label></td>
+          </tr>
+          <tr>
+            <td scope="row">Family should be primarily responsible for individual modesty in the society</td>
+            <td><label><input name="option3" type="radio" value="radio16"></label></td>
+            <td><label><input name="option3" type="radio" value="radio17"></label></td>
+            <td><label><input name="option3" type="radio" value="radio18"></label></td>
+            <td><label><input name="option3" type="radio" value="radio19"></label></td>
+            <td><label><input name="option3" type="radio" value="radio20"></label></td>
+          </tr>
+          <tr>
+            <td scope="row">Religion bodies alone should be concerned with spreading modesty</td>
+            <td><label><input name="option4" type="radio" value="radio21"></label></td>
+            <td><label><input name="option4" type="radio" value="radio22"></label></td>
+            <td><label><input name="option4" type="radio" value="radio23"></label></td>
+            <td><label><input name="option4" type="radio" value="radio24"></label></td>
+            <td><label><input name="option4" type="radio" value="radio25"></label></td>
+          </tr>
+          <tr>
+            <td scope="row">Mosdesty is an old concept and should not be discussed in today's modern society</td>
+            <td><label><input name="option5" type="radio" value="radio26"></label></td>
+            <td><label><input name="option5" type="radio" value="radio27"></label></td>
+            <td><label><input name="option5" type="radio" value="radio28"></label></td>
+            <td><label><input name="option5" type="radio" value="radio29"></label></td>
+            <td><label><input name="option5" type="radio" value="radio30"></label></td>
+          </tr>
+
+        </table>
+      </fieldset>
+
+      <label for="comments">Any other comments on modesty?</label>
+      <textarea id="comments" name="comment" placeholder="Please tell us more..." class="comment-area"></textarea>
+
+      <button id="submit" type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
 
 </html>
